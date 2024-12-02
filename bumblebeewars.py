@@ -243,6 +243,8 @@ while True:
           print("(5) Heavy-Duty Cotton - 200 Honeycomb - Adds 50 HP")
           Bks_choice = int(input("What suit would you like to buy?"))
           if Bks_choice == 1:
+            if honeycombs < 25:
+              print("You don't have enough Honeycombs!")
             player_health == 110
             print(f"You have bought the Polyester Beekeeper Suit, your HP is now {player_health}")
                            
