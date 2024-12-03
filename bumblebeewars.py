@@ -37,7 +37,6 @@ start_bee = "69 Bees"
 print("Welcome to Bumblebee Wars!")
 time.sleep(2)
 name = input("What would you like to be called? ")
-time.sleep(2)
 print(f"Hello {name}! Welcome to Bumblebee Wars!")
 time.sleep(3)
 print(f"You are {Starter_Char}, a beekeeper, tasked with keeping the hive safe.")
@@ -45,6 +44,7 @@ time.sleep(3)
 print("You need to protect the Honeybee's from the Bumblebee's")
 time.sleep(5)
 print("Lets start with your first encounter!")
+time.sleep(2)
 encounters = [
   "Bumblebee!",
   "duo (2) of Bumblebees!",
@@ -229,22 +229,28 @@ while True:
     elif main_menu_choice == 2:
         # Shop Logic:
         print(f"Welcome to the shop! You have, {honeycombs}, Honeycombs.")
-        print("(1) Beekeeper Suits")
+        print("(1) Beekeeper Suits (N/A)")
         print("(2) Beekeepers")
         print("(3) Potions")
-        print("(4) Currencies")
+        print("(4) Currencies (N/A)")
         print("(5) Exit")
         shop_choice = int(input("What would you like to buy? "))
         if shop_choice == 1:
-          print("(1) Polyester - 25 Honeycomb - Adds 10 HP")
-          print("(2) Nylon - 50 Honeycomb - Adds 20 HP")
-          print("(3) Polyester Mesh - 75 Honeycomb - Adds 25 HP")
-          print("(4) Polyester-Cotton Blend - 100 Honeycomb - Adds 35 HP")
-          print("(5) Heavy-Duty Cotton - 200 Honeycomb - Adds 50 HP")
-          Bks_choice = int(input("What suit would you like to buy?"))
-          if Bks_choice == 1:
-            if honeycombs < 25:
-              print("You don't have enough Honeycombs!")
-            player_health == 110
-            print(f"You have bought the Polyester Beekeeper Suit, your HP is now {player_health}")
+          print("N/A currently")
+          #print("(1) Polyester - 25 Honeycomb - Adds 10 HP")
+          #print("(2) Nylon - 50 Honeycomb - Adds 20 HP")
+          #print("(3) Polyester Mesh - 75 Honeycomb - Adds 25 HP")
+          #print("(4) Polyester-Cotton Blend - 100 Honeycomb - Adds 35 HP")
+          #print("(5) Heavy-Duty Cotton - 200 Honeycomb - Adds 50 HP")
+          #Bks_choice = int(input("What suit would you like to buy?"))
+          #if Bks_choice == 1:
+            #if honeycombs < 25:
+              #print("You don't have enough Honeycombs!")
+            #player_health == 110
+            #print(f"You have bought the Polyester Beekeeper Suit, your HP is now {player_health}")
+        elif shop_choice == 2:
+          print("(1) Beekeeper Venuckenshnucker - 100 Honeycomb - Special: +2 Bees")
+          print("(2) Beekeeper Prophet Canada - 5 Bottles of Maple Syrup - Special: +20% Stun")
+          print("(3) Beekeeper Rufus - 48 Popcorn Chicken - Special: Damage Boost")
+          print("(4) Beekeeper Fowler - Beat Esteemed Edumacator Boss - Special: Instant win due to high knowledge given on a daily basis")
                            
