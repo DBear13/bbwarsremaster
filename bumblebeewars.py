@@ -32,7 +32,6 @@ hard_damage = [
   18
 ]
 damage = easy_damage
-start_bee = "69 Bees"
 #Start
 print("Welcome to Bumblebee Wars!")
 time.sleep(2)
@@ -100,18 +99,18 @@ else:
   print("Invalid Choice! Game crashed!!!")
 if difficulty == "Easy":
   damage = easy_damage
-  start_bee = easy_bee_amt
+  bees = easy_bee_amt
 elif difficulty == "Medium":
   damage = medium_damage
-  start_bee = medium_bee_amt
+  bees = medium_bee_amt
 elif difficulty == "Hard":
   damage = hard_damage
-  start_bee = hard_bee_amt
+  bees = hard_bee_amt
 print(f"You've chosen to play on {difficulty} difficulty!")
 time.sleep(2)
 print("Now, let's introduce you to the hive!")
 time.sleep(2)
-print(f"Since you picked {difficulty} difficulty, you start with {start_bee}")
+print(f"Since you picked {difficulty} difficulty, you start with {bees}")
 time.sleep(2)
 print("Well, that's it for the tutorial!")
 time.sleep(2)
@@ -120,6 +119,13 @@ time.sleep(2)
 player_health = 100  # Initial player health
 honeycombs = 0  # Global currency
 current_beekeeper = Starter_Char # Tracks the current beekeeper
+#Beekeeper Logic
+
+if current_beekeeper == "Beekeeper Venuckenshnucker":
+  bees += 2
+elif current_beekeepr != "Beekeeper Venuckenshnucker":
+  bees = easy_bee_amt
+
 experience = 0  # Player's experience points
 level = 1  # Player's level
 exp_to_next_level = 100  # Experience needed for the next level
@@ -246,11 +252,22 @@ while True:
           #if Bks_choice == 1:
             #if honeycombs < 25:
               #print("You don't have enough Honeycombs!")
-            #player_health == 110
-            #print(f"You have bought the Polyester Beekeeper Suit, your HP is now {player_health}")
+            else:
+              #player_health == 110
+              #print(f"You have bought the Polyester Beekeeper Suit, your HP is now {player_health}")
         elif shop_choice == 2:
           print("(1) Beekeeper Venuckenshnucker - 100 Honeycomb - Special: +2 Bees")
           print("(2) Beekeeper Prophet Canada - 5 Bottles of Maple Syrup - Special: +20% Stun")
           print("(3) Beekeeper Rufus - 48 Popcorn Chicken - Special: Damage Boost")
           print("(4) Beekeeper Fowler - Beat Esteemed Edumacator Boss - Special: Instant win due to high knowledge given on a daily basis")
+          print("(5) Exit")
+          Bk_choice = int(input("Which Beekeeper would you like to buy?"))
+            if Bk_choice == 1:
+              if honeycombs < 100:
+                print("You don't have enough Honeycombs!")
+              else:
+                print("You are now Beekeeper Venuckenshnucker!")
+                
+              
+          
                            
